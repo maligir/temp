@@ -1,0 +1,57 @@
+%YAML:1.0
+
+Sensor.Type: "ROS"
+Save.Path: "data/ros_frames/"
+
+ROSBag.Path: "videos/test.bag"
+
+RGB.Camera.Info.Topic: "/nav_kinect/rgb/camera_info"
+RGB.Camera.Image.Topic: "/nav_kinect/rgb/image_raw"
+Depth.Camera.Info.Topic: "/nav_kinect/depth/camera_info"
+Depth.Camera.Image.Topic: "/nav_kinect/depth/image_raw"
+
+RGB.Camera.AlphaX: 589.3664541825391
+RGB.Camera.AlphaY: 589.3664541825391
+RGB.Camera.Gamma: 0.0
+RGB.Camera.u0: 320.5
+RGB.Camera.v0: 240.5
+
+Depth.Min: 0.5
+Depth.Max: 4.5
+
+Image.Width: 640
+Depth.Width: 640
+Depth.Height: 480
+Image.Height: 480
+
+# Path to ORBSLAM settings
+ORB.Vocab: "third_party/ORB_SLAM3/Vocabulary/ORBvoc.txt"
+ORB.Settings: "third_party/ORB_SLAM3/segbotv2_mono_480p.yaml"
+
+# ORBSLAM Map Merging Settings
+NSamples: 10
+Unmerged.Frames.Max: 300
+Step.Decay: 0.5
+Radius.Max: 3.0
+Threshold.Close: 0.005
+Linear.Step.Min: 0.001
+Angular.Step.Min: 0.000347222 # linear step / depth max
+Linear.Velocity.Max: 0.075
+Angular.Velocity.Max: 0.05
+
+Regex1: "[0-9]\\.[0-9][0-9][0-9]"
+Regex2: "[0-9]\\.?[0-9][0-9][0-9]|MEN|WOMEN|STAIR[1-2]?|GENDER"
+
+YOLO.Size: 1280
+YOLO.Rows: 102000
+YOLO.Output: "output"
+YOLO.Weights: "config/yolov5_best.onnx"
+
+EAST.Net: "config/frozen_east_text_detection.pb"
+Tess.Data: "third_party/tesseract/tessdata"
+Keyframes.Path: "data/ros_frames/full_trajectory.csv"
+Tess.Whitelist: "0123456789ADEIGMNORSTW\\."
+
+
+Threshold.Confidence: 0.5
+Threshold.NMS: 0.4

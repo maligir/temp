@@ -1,0 +1,10 @@
+third_party/ORB_SLAM3/Vocabulary/ORBvoc.txt
+third_party/ORB_SLAM3/segbot_mono_imu_720p.yaml
+/media/david/Extreme\ SSD/segbot_v4_run.mkv
+config/custom-yolov2-tiny-voc.cfg
+config/custom-yolov2-tiny-voc_best.weights
+config/frozen_east_text_detection.pb
+third_party/tesseract/tessdata
+data/
+
+./build/src/app/playback third_party/ORB_SLAM3/Vocabulary/ORBvoc.txt third_party/ORB_SLAM3/segbot_mono_imu_720p.yaml /media/david/Extreme\ SSD/placard_discovery/segbot_v4_run.mkv data/

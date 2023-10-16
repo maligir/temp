@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 2.8)
+project(placard_discovery)
+
+set(COMMON_INCLUDES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/common_includes)
+
+#add_subdirectory(lib/k4a_borrowed)
+add_subdirectory(lib/settings_management)
+add_subdirectory(lib/frame_recipients)
+add_subdirectory(lib/kinect_interface)
+add_subdirectory(lib/ros_interface)
+add_subdirectory(lib/ORBSLAM_interface)
+add_subdirectory(lib/octomap_interface)
+add_subdirectory(lib/mapping)
+add_subdirectory(lib/semantic_processing)
+add_subdirectory(lib/apriltag_interface)
+add_subdirectory(app)

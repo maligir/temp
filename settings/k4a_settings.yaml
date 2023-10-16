@@ -1,0 +1,45 @@
+%YAML:1.0
+
+Sensor.Type: "K4A"
+Save.Path: "data/k4a_frames/"
+
+Record.Path: "videos/run1.mkv"
+
+Recording.Start: 5947911
+Recording.End:  29481233
+
+Depth.Min: 0.25
+Depth.Max: 2.88
+
+# Path to ORBSLAM settings
+ORB.Vocab: "third_party/ORB_SLAM3/Vocabulary/ORBvoc.txt"
+ORB.Settings: "third_party/ORB_SLAM3/segbotv4_mono_imu_720p.yaml"
+
+# ORBSLAM Map Merging Settings
+NSamples: 10
+Unmerged.Frames.Max: 300
+Step.Decay: 0.5
+Radius.Max: 3.0
+Threshold.Close: 0.005
+Linear.Step.Min: 0.001
+Angular.Step.Min: 0.000347222 # linear step / depth max
+Linear.Velocity.Max: 0.075
+Angular.Velocity.Max: 0.05
+
+Regex1: "[0-9]\\.[0-9][0-9][0-9]"
+Regex2: "[0-9]\\.?[0-9][0-9][0-9]|MEN|WOMEN|STAIR[1-2]?|GENDER"
+
+YOLO.Size: 1280
+YOLO.Rows: 102000
+YOLO.Output: "output"
+YOLO.Weights: "config/yolov5_best.onnx"
+# YOLO.Config: "config/custom-yolov2-tiny-voc.cfg"
+# YOLO.Weights: "config/custom-yolov2-tiny-voc_best.weights"
+
+EAST.Net: "config/frozen_east_text_detection.pb"
+Tess.Data: "third_party/tesseract/tessdata"
+Keyframes.Path: "data/k4a_frames/full_trajectory.csv"
+Tess.Whitelist: "0123456789ADEIGMNORSTW\\."
+
+Threshold.Confidence: 0.5
+Threshold.NMS: 0.4

@@ -1,0 +1,11 @@
+yolo_model:
+
+  config_file:
+    name: custom-yolov2-tiny-voc.cfg
+  weight_file:
+    name: custom-yolov2-tiny-voc_best.weights
+  threshold:
+    value: 0.3
+  detection_classes:
+    names:
+      - placard
